@@ -1,0 +1,10 @@
+{
+  "Home": "主页",
+  "Welcome to React": "欢迎使用 React 和 react-i18next",
+  "Docs": "文档",
+  "Pricing": "定价",
+  "Blog": "博客",
+  "About": "关于",
+  "Login": "登录",
+  "Register": "注册"
+}

@@ -1,0 +1,10 @@
+{
+  "Home": "Accueil",
+  "Welcome to React": "Bienvenue sur React et react-i18next",
+  "Docs": "Documentation",
+  "Pricing": "Tarifs",
+  "Blog": "Blog",
+  "About": "À propos",
+  "Login": "Connexion",
+  "Register": "Inscription"
+}

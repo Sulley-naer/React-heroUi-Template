@@ -1,0 +1,27 @@
+:root {
+    --login-color: rgb(249, 168, 212);       /* pink-300 */
+    --register-color: rgb(34, 211, 238);     /* cyan-400 */
+    /* 登录文字 描边色 */
+    --stroke-color: white;
+}
+
+html.dark {
+    --login-color: #a7d2d0;        /* pink-500 */
+    --register-color: rgb(239, 151, 178);      /* cyan-500 */
+    /* 登录文字 描边色 */
+    --stroke-color: #ffffffed;
+}
+
+.btn-login-glow {
+    color: var(--login-color) !important;
+    text-shadow:
+            0 0 1px var(--stroke-color);
+    transition: all 0.3s ease;
+}
+
+.btn-register-glow {
+    color: var(--register-color) !important;
+    text-shadow:
+            0 0 1px var(--stroke-color);
+    transition: all 0.3s ease;
+}
