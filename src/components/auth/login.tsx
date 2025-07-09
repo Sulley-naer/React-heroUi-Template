@@ -10,8 +10,9 @@ import {
   ModalFooter,
   ModalHeader,
 } from '@heroui/react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useTranslation } from 'react-i18next'
 
+import { useDispatch, useSelector } from 'react-redux'
 import { hideLogin } from '@/actions/model/Login'
 import { LockIcon, MailIcon } from '../icons'
 
@@ -20,49 +21,51 @@ function LoginModal() {
     (state: RootState) => state.loginModel.loginVisible,
   )
   const dispatch = useDispatch()
-  const onClose = () => {
-    dispatch(hideLogin())
-  }
+  const onClose = () => dispatch(hideLogin())
+
+  const { t } = useTranslation('home') // 可根据你的命名空间调整
 
   return (
     <Modal isOpen={visible} placement="top-center" onOpenChange={onClose}>
       <ModalContent>
         {() => (
           <>
-            <ModalHeader className="flex flex-col gap-1">Log in</ModalHeader>
+            <ModalHeader className="flex flex-col gap-1">
+              {t('Login')}
+            </ModalHeader>
             <ModalBody>
               <Input
                 endContent={
                   <MailIcon className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
                 }
-                label="Email"
-                placeholder="Enter your email"
+                label={t('Email')}
+                placeholder={t('Enter your email')}
                 variant="bordered"
               />
               <Input
                 endContent={
                   <LockIcon className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
                 }
-                label="Password"
-                placeholder="Enter your password"
+                label={t('Password')}
+                placeholder={t('Enter your password')}
                 type="password"
                 variant="bordered"
               />
               <div className="flex py-2 px-1 justify-between">
                 <Checkbox classNames={{ label: 'text-small' }}>
-                  Remember me
+                  {t('Remember me')}
                 </Checkbox>
                 <Link color="primary" href="#" size="sm">
-                  Forgot password?
+                  {t('Forgot password?')}
                 </Link>
               </div>
             </ModalBody>
             <ModalFooter>
               <Button color="danger" variant="flat" onPress={onClose}>
-                Close
+                {t('Close')}
               </Button>
               <Button color="primary" onPress={onClose}>
-                Sign in
+                {t('Sign in')}
               </Button>
             </ModalFooter>
           </>

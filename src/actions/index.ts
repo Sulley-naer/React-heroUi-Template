@@ -3,12 +3,14 @@ import { persistReducer, persistStore } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
 
 import loginModel from '@/actions/model/Login'
+import RegisterModel from '@/actions/model/Register'
 import globalOptions from '@/actions/setting/globalOptions'
 import userCounter from '@/actions/user'
 
 // 合并所有 reducer
 const rootReducer = combineReducers({
   userCounter,
+  RegisterModel,
   loginModel,
   globalOptions,
 })

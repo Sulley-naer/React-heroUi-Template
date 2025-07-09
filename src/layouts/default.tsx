@@ -2,6 +2,7 @@ import { Link } from '@heroui/link'
 
 import React from 'react'
 import LoginModal from '@/components/auth/login.tsx'
+import Register from '@/components/auth/Register'
 import { Navbar } from '@/components/navbar'
 
 export default function DefaultLayout({
@@ -14,6 +15,7 @@ export default function DefaultLayout({
       <Navbar />
       <main className="container mx-auto max-w-7xl px-6 flex-grow pt-16">
         <LoginModal />
+        <Register />
         {children}
       </main>
       <footer className="w-full flex items-center justify-center py-3">

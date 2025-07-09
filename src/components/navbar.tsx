@@ -17,6 +17,7 @@ import { useTranslation } from 'react-i18next'
 import { useDispatch } from 'react-redux'
 
 import { showLogin } from '@/actions/model/Login'
+import { showRegister } from '@/actions/model/Register.ts'
 import {
   GithubIcon,
   LoginIcon,
@@ -34,6 +35,9 @@ export function Navbar() {
 
   const ShowLoginModel = () => {
     dispatch(showLogin())
+  }
+  const ShowRegisterModel = () => {
+    dispatch(showRegister())
   }
 
   const searchInput = (
@@ -123,6 +127,7 @@ export function Navbar() {
             className="text-sm font-normal btn-register-glow bg-default-100"
             startContent={<RegisterIcon size={15} />}
             variant="flat"
+            onPress={ShowRegisterModel}
           >
             {t('Register')}
           </Button>

@@ -4,11 +4,14 @@ import { Snippet } from '@heroui/snippet'
 import { button as buttonStyles } from '@heroui/theme'
 import { motion } from 'framer-motion'
 
+import { useTranslation } from 'react-i18next'
 import { GithubIcon } from '@/components/icons'
 import { siteConfig } from '@/config/site'
 import DefaultLayout from '@/layouts/default'
 
 export default function IndexPage() {
+  const { t } = useTranslation('home')
+
   const textVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: (i: number) => ({
@@ -53,14 +56,14 @@ export default function IndexPage() {
             })}
             href={siteConfig.links.docs}
           >
-            document
+            {t('document')}
           </Link>
           <Link
             className={buttonStyles({ variant: 'bordered', radius: 'full' })}
             href={siteConfig.links.github}
           >
             <GithubIcon size={20} />
-            GitHub
+            {t('GitHub')}
           </Link>
         </div>
 
