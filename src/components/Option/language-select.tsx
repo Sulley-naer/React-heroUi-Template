@@ -8,7 +8,7 @@ import { LanguagesIcon } from '@/components/icons'
 import { siteConfig } from '@/config/site'
 
 export function LanguageSelect() {
-  const { i18n } = useTranslation()
+  const { t, i18n } = useTranslation()
   const selected = useSelector(
     (state: RootState) => state.globalOptions.language,
   )
@@ -26,6 +26,7 @@ export function LanguageSelect() {
 
   return (
     <Select
+      aria-label={t('Select language')}
       className="max-w-xs w-32"
       selectedKeys={[selected]}
       onSelectionChange={LanguageChange}

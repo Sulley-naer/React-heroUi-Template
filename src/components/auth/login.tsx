@@ -11,7 +11,6 @@ import {
   ModalHeader,
 } from '@heroui/react'
 import { useTranslation } from 'react-i18next'
-
 import { useDispatch, useSelector } from 'react-redux'
 import { hideLogin } from '@/actions/model/Login'
 import { LockIcon, MailIcon } from '../icons'
