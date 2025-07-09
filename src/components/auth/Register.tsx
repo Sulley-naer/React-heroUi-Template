@@ -137,7 +137,7 @@ function renderRegisterForm(
 
 // ✅ 主组件
 export default function RegisterModal() {
-  const { t } = useTranslation('Home')
+  const { t } = useTranslation('home')
   const dispatch = useDispatch()
   const visible = useSelector(
     (state: RootState) => state.RegisterModel.loginVisible,
@@ -172,17 +172,17 @@ export default function RegisterModal() {
                 variant="flat"
                 onPress={() => formRef.current?.reset()}
               >
-                Reset
+                {t('Reset')}
               </Button>
               <Button
                 color="primary"
                 type="button"
                 onPress={() => formRef.current?.requestSubmit()}
               >
-                Submit
+                {t('Sign Up')}
               </Button>
               <Button color="danger" variant="flat" onPress={onClose}>
-                Close
+                {t('Close')}
               </Button>
             </ModalFooter>
           </>
