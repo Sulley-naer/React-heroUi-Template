@@ -16,7 +16,7 @@ export function LanguageSelect() {
 
   const LanguageChange = (keys: any) => {
     const lang = Array.from(keys)[0] as 'en' | 'cn' | 'fr'
-    i18n.changeLanguage(lang)
+    i18n.changeLanguage(lang).then(r => r.name)
     dispatch(SetLanguage(lang))
   }
 
