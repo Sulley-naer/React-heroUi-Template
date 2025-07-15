@@ -9,7 +9,6 @@ import {
   ModalHeader,
 } from '@heroui/react'
 import React from 'react'
-import KeepAlive from 'react-activation'
 import { useTranslation } from 'react-i18next'
 import { useDispatch, useSelector } from 'react-redux'
 import { hideRegister } from '@/actions/model/Register.ts'
@@ -153,7 +152,7 @@ export default function RegisterModal() {
     <Modal isOpen={visible} placement="top-center" onOpenChange={onClose}>
       <ModalContent>
         {() => (
-          <KeepAlive>
+          <>
             <ModalHeader className="flex flex-col gap-1 m-auto">
               {t('Register')}
             </ModalHeader>
@@ -186,7 +185,7 @@ export default function RegisterModal() {
                 {t('Close')}
               </Button>
             </ModalFooter>
-          </KeepAlive>
+          </>
         )}
       </ModalContent>
     </Modal>
