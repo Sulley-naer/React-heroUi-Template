@@ -1,4 +1,4 @@
-import DefaultLayout from "@/layouts/default";
+import DefaultLayout from '@/layouts/default'
 
 export default function DocsPage() {
   return (
@@ -9,5 +9,5 @@ export default function DocsPage() {
         </div>
       </section>
     </DefaultLayout>
-  );
+  )
 }
